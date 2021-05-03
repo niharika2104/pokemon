@@ -1,0 +1,255 @@
+body {
+  background-image: linear-gradient(to right, white, pink);
+  margin: 0;
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+  font-family: "Freckle Face", cursive;
+}
+h1:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 2px rgb(79, 13, 92);
+}
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #8e6099;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #8e6099;
+}
+
+.container-filter {
+  font-family: "Freckle Face", cursive;
+  float: left;
+  position: relative;
+  width: 50%;
+}
+
+.dropdown-content {
+  font-family: "Freckle Face", cursive;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.container-filter a:hover {
+  background-color: #8e6099;
+}
+
+.show {
+  display: block;
+}
+
+.spanner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #2a2a2a55;
+  width: 100%;
+  display: block;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+  transform: translateY(-50%);
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  visibility: hidden;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 100%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 120px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.show {
+  visibility: visible;
+}
+
+.spanner,
+.overlay {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.spanner.show,
+.overlay.show {
+  opacity: 1;
+}
+
+#poke {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 20px;
+  background-color: #8e6099;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+}
+
+#searchBar {
+  font-family: "Freckle Face", cursive;
+  width: 50%;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-left: 30px;
+}
+
+#searchWrapper {
+  position: relative;
+}
+
+.card {
+  list-style: none;
+  padding: 40px;
+  background-color: white;
+  border-inline-color: black;
+  color: #222;
+  text-align: center;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 0;
+  font-family: "Freckle Face", cursive;
+}
+
+.card-subtitle {
+  font-weight: lighter;
+  color: black;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.card-image {
+  height: 180px;
+}
+
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 160px;
+  height: 80vh;
+  width: 80vw;
+  background: #f4f4f4;
+  border-color: black;
+  box-shadow: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #8e6099;
+  padding: 10px 10px;
+  border: none;
+  color: white;
+  border-radius: 1px;
+  transition: transform 100ms;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 2px rgb(79, 13, 92);
+}

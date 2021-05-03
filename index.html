@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Find your pokemons Here</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Girassol&family=Orelega+One&family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 onclick="goBack()"> Find your pokemons Here</h1>
+            <div class="container-filter" id="searchWrapper">
+                <input
+                    type="text"
+                    name="searchBar"
+                    id="searchBar"
+                    placeholder="search..."
+                />
+            </div>
+            <div class="container-filter">
+                <button onclick="myFunction()" class="dropbtn">Filters</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#height" onclick="HeightFilters()" >Height > 10</a>
+                  <a href="#weight" onclick="WeightFilters()">Weight > 500</a>
+                  <a href="#order" onclick="OrderFilters()">Order > 10</a>
+                  <a href="#type" onclick="experienceFilters()">base_experience > 100</a>
+                </div>
+            </div>
+            <ul id="poke"></ul>
+        </div>
+<div class="overlay"></div>
+<div class="spanner">
+  <div class="loader"></div>
+  <p>loading data...</p>
+</div>
+        <script src="app.js"></script>
+    </body>
+</html>
